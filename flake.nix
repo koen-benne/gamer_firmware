@@ -26,8 +26,19 @@
           # The Nix packages provided in the environment
           # Add any you need here
           packages = with pkgs; [
+            (writeScriptBin "flash-kimiko" ''
+                #!${runtimeShell}
+                echo "Make sure you are in the root directory!"
+                sudo make keycapsss/kimiko/rev2:default:flash
+            '')
+            (writeScriptBin "flash-lily" ''
+                #!${runtimeShell}
+                echo "Make sure you are in the root directory!"
+                sudo make epic/chad58:default:flash
+            '')
             qmk
             git
+            avrdude
             python3Packages.pip
           ];
 
