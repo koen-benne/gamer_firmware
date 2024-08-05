@@ -18,7 +18,7 @@
 
 #pragma once
 
-#define MASTER_RIGHT
+#define MASTER_LEFT
 #define ENABLE_RGB_MATRIX_ALPHAS_MODS    // Static dual hue, speed is hue for secondary hue
 #define ENABLE_RGB_MATRIX_RAINBOW_BEACON // Full tighter gradient spinning around center of keyboard
 
@@ -35,3 +35,6 @@
 #if defined(POINTING_DEVICE_DRIVER_pimoroni_trackball)
 #    define POINTING_DEVICE_ROTATION_180 // may be used for trackball in 2nd position
 #endif
+
+#define SPLIT_USB_DETECT
+#define NO_USB_STARTUP_CHECK
