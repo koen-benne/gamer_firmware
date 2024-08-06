@@ -34,7 +34,7 @@
             (writeScriptBin "flash-lily" ''
                 #!${runtimeShell}
                 echo "Make sure you are in the root directory!"
-                sudo make epic/chad58:default:flash
+                sudo make lily58/light:lily58l:flash
             '')
             qmk
             git
